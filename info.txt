@@ -1,0 +1,48 @@
+I have done a project on Pumpkin Leaf Disease Classification.
+
+For code, you can check the other files I have uploaded. One of them contains an explanation of the code.
+
+Dataset Link: https://www.kaggle.com/datasets/tahmidmir/pumpkin-leaf-diseases-dataset-from-bangladesh
+
+For understanding the code and to check accuracy, you can refer to the notebook in my repository.
+
+I got an increased accuracy with this dataset.
+
+Expected Test Accuracy: 60%
+
+Test Accuracy: 75%
+
+
+
+
+Why is the Accuracy Increasing Every Time I Run the Model?
+
+You might notice that the accuracy of the model improves with each run. This is a positive outcome, and here are some factors that contribute to this behavior:
+
+1. Random Initialization of Weights  
+   Every time you run the model, the weights are initialized randomly. This can sometimes lead to better starting points, allowing the model to converge to a more optimal solution, improving accuracy.
+
+2. Data Shuffling  
+   The dataset is shuffled before each training session, meaning the model sees the data in a different order each time. This can result in better learning and generalization, which might lead to slightly higher accuracy.
+
+3. Dropout Regularization  
+   The model uses dropout to prevent overfitting. Dropout randomly ignores a fraction of neurons during training, which can sometimes help the model generalize better, leading to improved performance each time.
+
+4. Optimizer Behavior  
+   Optimizers like Adam adaptively adjust the learning rate during training. This helps the model converge more efficiently, which could result in better performance with each run.
+
+5. Stochastic Nature of Training  
+   The model training process uses stochastic gradient descent, where the weights are updated based on random batches of data. This randomness can lead to fluctuations in performance, and sometimes the model finds better solutions.
+
+6. Different Test Sets  
+   If the dataset is split randomly into training and testing sets, each run might have a slightly different test set. This variation can lead to improvements in accuracy, depending on the test data.
+
+7. Data Augmentation (If Used)  
+   If data augmentation techniques (such as random rotations, zooms, or flips) are applied, the model might see different variations of the same images with each run, helping it generalize better.
+
+### Why Is This a Good Thing?  
+Seeing increased accuracy is a sign that the model is learning better patterns and improving its generalization. However, to make sure the improvement is consistent and not just random, it's a good idea to:  
+- Use Cross-Validation: This provides a more reliable measure of performance.  
+- Track Results: Keep a log of accuracy over multiple runs to confirm consistent improvement.
+
+In summary, the improvements you're seeing are likely due to the model finding better ways to learn from the data, which is a good indication that it's working as intended!
